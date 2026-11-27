@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Quality Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>✨ AI Prompt Quality Checker</h1>
+        <p>Analyze your AI prompts and improve your prompting skills.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Left side: Prompt input -->
+        <section class="input-card">
+            <h2>📝 Enter Your AI Prompt</h2>
+            <p class="description">
+                Paste or type your prompt below to check its quality.
+            </p>
+
+            <textarea
+                id="promptInput"
+                placeholder="Enter your AI prompt here..."
+            ></textarea>
+
+            <p id="errorMessage" class="error"></p>
+
+            <div class="button-group">
+                <button id="checkBtn" class="check-btn">
+                    🔍 Check Prompt
+                </button>
+
+                <button id="sampleBtn" class="sample-btn">
+                    📄 Load Sample
+                </button>
+
+                <button id="clearBtn" class="clear-btn">
+                    🗑 Clear
+                </button>
+            </div>
+        </section>
+
+        <!-- Right side: Analysis results -->
+        <section class="result-card">
+
+            <h2>📊 Analysis Results</h2>
+
+            <div class="score-section">
+                <div class="score-circle">
+                    <span id="score">0</span>
+                    <small>/ 100</small>
+                </div>
+
+                <h3 id="rating">Not Analyzed</h3>
+                <p id="ratingDescription">
+                    Your prompt score will appear here.
+                </p>
+            </div>
+
+            <h3 class="progress-heading">Prompt Quality Score</h3>
+
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="progressText">0% Completed</p>
+
+            <h3 class="components-heading">
+                Component Analysis
+            </h3>
+
+            <div id="resultsList">
+
+                <div class="result-item">
+                    <span>👤 Role</span>
+                    <span class="pending">Not Checked</span>
+                </div>
+
+                <div class="result-item">
+                    <span>🎯 Task</span>
+                    <span class="pending">Not Checked</span>
+                </div>
+
+                <div class="result-item">
+                    <span>📚 Context</span>
+                    <span class="pending">Not Checked</span>
+                </div>
+
+                <div class="result-item">
+                    <span>⚙️ Constraints</span>
+                    <span class="pending">Not Checked</span>
+                </div>
+
+                <div class="result-item">
+                    <span>📄 Output Format</span>
+                    <span class="pending">Not Checked</span>
+                </div>
+
+            </div>
+
+            <div class="suggestion-section">
+                <h3>💡 Improvement Suggestions</h3>
+                <ul id="suggestions">
+                    <li>Enter a prompt to receive suggestions.</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>AI Prompt Quality Checker | Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
